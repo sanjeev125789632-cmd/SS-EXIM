@@ -1599,3 +1599,32 @@ body { animation: pageEnter .45s var(--ease) both; }
 @media (max-width: 479px) {
   .gallery-grid { grid-template-columns: 1fr; }
 }
+
+
+/* ===== Mobile Friendliness Enhancements ===== */
+html, body { overflow-x: hidden; }
+
+@media (max-width: 767px) {
+     /* Prevent off-canvas menu from creating horizontal scroll */
+  .mobile-menu { max-width: 100%; }
+
+  /* Comfortable tap targets (>=44px) */
+  .hamburger { min-height: 44px; min-width: 44px; justify-content: center; box-sizing: border-box; }
+     .btn-nav-cta,
+     .scroll-cue,
+     .mobile-cta,
+     .tab-btn,
+     .gf-btn,
+     .o-link { min-height: 44px; display: inline-flex; align-items: center; }
+     .ft-links a { min-height: 40px; display: inline-flex; align-items: center; }
+
+  /* Let button rows wrap cleanly instead of squeezing */
+  .svc-tabs, .gallery-filters, .gf-row, .partners-strip { flex-wrap: wrap; }
+
+  /* Improve legibility of the smallest labels on phones */
+  .stat-lbl,
+     .float-card,
+     .gstin-lbl,
+     .gi-tag,
+     .office-badge { font-size: .8rem; }
+}
