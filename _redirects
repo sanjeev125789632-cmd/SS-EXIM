@@ -1,0 +1,12 @@
+# Netlify Redirects File
+
+# Force HTTPS & WWW domain
+http://ss-exim.com/*       https://www.ss-exim.com/:splat  301!
+https://ss-exim.com/*      https://www.ss-exim.com/:splat  301!
+http://www.ss-exim.com/*   https://www.ss-exim.com/:splat  301!
+
+# Redirect any old .php requests to root or clean URLs
+/*.php                     /:splat                          301!
+
+# Fallback 404 rule
+/*                         /404.html                        404
