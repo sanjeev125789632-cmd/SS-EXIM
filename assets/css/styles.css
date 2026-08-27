@@ -323,6 +323,7 @@ img {
   height: 52px;
   width: auto;
   object-fit: contain;
+  content: url('/assets/img/logo.svg');
 }
 
 .nav-desktop {
