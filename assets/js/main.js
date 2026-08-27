@@ -40,23 +40,12 @@ function initGlobalMetadata() {
     document.head.appendChild(verification);
   }
 
-  const headLinks = [
-    ['icon', '/favicon.ico', 'image/x-icon', null],
-    ['icon', '/favicon-32x32.png', 'image/png', '32x32'],
-    ['icon', '/favicon-16x16.png', 'image/png', '16x16'],
-    ['apple-touch-icon', '/apple-touch-icon.png', null, '180x180'],
-    ['manifest', '/site.webmanifest', 'application/manifest+json', null]
-  ];
-
-  headLinks.forEach(([rel, href, type, sizes]) => {
-    if (document.querySelector(`link[rel="${rel}"][href="${href}"]`)) return;
-    const link = document.createElement('link');
-    link.rel = rel;
-    link.href = href;
-    if (type) link.type = type;
-    if (sizes) link.sizes = sizes;
-    document.head.appendChild(link);
-  });
+  if (!document.querySelector('link[href="/assets/css/fixes.css"]')) {
+    const fixes = document.createElement('link');
+    fixes.rel = 'stylesheet';
+    fixes.href = '/assets/css/fixes.css';
+    document.head.appendChild(fixes);
+  }
 }
 
 function pushAnalyticsEvent(eventName, params = {}) {
