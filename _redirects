@@ -5,6 +5,39 @@ http://ss-exim.com/*       https://www.ss-exim.com/:splat  301!
 https://ss-exim.com/*      https://www.ss-exim.com/:splat  301!
 http://www.ss-exim.com/*   https://www.ss-exim.com/:splat  301!
 
+# Legacy image filenames -> lowercase-hyphenated canonical assets
+/assets/img/AFPC%20Panel.jpg                    /assets/img/apfc-panel.jpg                    301!
+/assets/img/ACB.jpg                             /assets/img/acb.jpg                           301!
+/assets/img/ATS%20Panel.jpg                     /assets/img/ats-panel.jpg                     301!
+/assets/img/ATS%20cum%20Distribution%20Panel.jpg /assets/img/ats-cum-distribution-panel.jpg   301!
+/assets/img/Busbar%20Distribution%20Panel.jpg   /assets/img/busbar-distribution-panel.jpg    301!
+/assets/img/Capacitor%20Panel.jpg               /assets/img/capacitor-panel.jpg               301!
+/assets/img/Controller.jpg                      /assets/img/controller.jpg                    301!
+/assets/img/DB%20Panels.jpg                     /assets/img/db-panels.jpg                     301!
+/assets/img/Digital%20And%20Aalog%20Control%20Timer.jpg /assets/img/digital-analog-control-timer.jpg 301!
+/assets/img/Distribution%20Panel.jpg            /assets/img/distribution-panel.jpg            301!
+/assets/img/Energy%20Meter.jpg                  /assets/img/energy-meter.jpg                  301!
+/assets/img/Extended%20Busbar.jpg               /assets/img/extended-busbar.jpg               301!
+/assets/img/Feeder%20Pillar%20Panel.jpg         /assets/img/feeder-pillar-panel.jpg         301!
+/assets/img/Fire%20Pump%20Panels.jpg            /assets/img/fire-pump-panels.jpg            301!
+/assets/img/IBMS.jpg                            /assets/img/ibms.jpg                          301!
+/assets/img/IOT%20Sensor%20Network.jpg          /assets/img/iot-sensor-network.jpg          301!
+/assets/img/Jupiter%20Gateway.jpg               /assets/img/jupiter-gateway.jpg               301!
+/assets/img/MCC%20Panel.jpg                     /assets/img/mcc-panel.jpg                     301!
+/assets/img/MCCB%20Supply.jpg                   /assets/img/mccb-supply.jpg                   301!
+/assets/img/MCCB.jpg                            /assets/img/mccb.jpg                          301!
+/assets/img/Meter%20Distribution%20Panel.jpg    /assets/img/meter-distribution-panel.jpg    301!
+/assets/img/Miniature%20Circuit%20Breaker.jpg   /assets/img/miniature-circuit-breaker.jpg   301!
+/assets/img/Outdoor%20Distribution%20Panel.jpg  /assets/img/outdoor-distribution-panel.jpg  301!
+/assets/img/Pluto%20Gateway.jpg                 /assets/img/pluto-gateway.jpg                 301!
+/assets/img/Sensors.jpg                         /assets/img/sensors.jpg                       301!
+/assets/img/Street%20Light%20Panel.jpg          /assets/img/street-light-panel.jpg          301!
+/assets/img/Temperature%20Control%20Panel.jpg   /assets/img/temperature-control-panel.jpg   301!
+/assets/img/Thermography.jpg                    /assets/img/thermography.jpg                  301!
+/assets/img/Venus%20Gateway.jpg                 /assets/img/venus-gateway.jpg                 301!
+/assets/img/Voltage_Stabilizer..jpg             /assets/img/voltage-stabilizer.jpg             301!
+/assets/img/gallery/afpc-panel.jpg              /assets/img/gallery/apfc-panel.jpg              301!
+
 # Redirect any old .php requests to root or clean URLs
 /*.php                     /:splat                          301!
 
