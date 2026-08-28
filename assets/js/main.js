@@ -40,6 +40,21 @@ function initGlobalMetadata() {
     document.head.appendChild(verification);
   }
 
+  if (!document.querySelector('link[rel~="icon"]')) {
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.type = 'image/jpeg';
+    favicon.href = '/assets/img/logo.jpg';
+    document.head.appendChild(favicon);
+  }
+
+  if (!document.querySelector('link[rel="apple-touch-icon"]')) {
+    const appleTouchIcon = document.createElement('link');
+    appleTouchIcon.rel = 'apple-touch-icon';
+    appleTouchIcon.href = '/assets/img/logo.jpg';
+    document.head.appendChild(appleTouchIcon);
+  }
+
   if (!document.querySelector('link[href="/assets/css/fixes.css"]')) {
     const fixes = document.createElement('link');
     fixes.rel = 'stylesheet';
