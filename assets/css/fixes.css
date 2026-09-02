@@ -36,12 +36,7 @@
   }
 }
 
-/* Contact anti-spam and consent UI. */
-.form-captcha {
-  min-height: 78px;
-  margin: 0.25rem 0 1rem;
-}
-
+/* Contact-form consent UI. */
 .form-consent {
   margin: 0.75rem 0 0;
   font-size: 0.82rem;

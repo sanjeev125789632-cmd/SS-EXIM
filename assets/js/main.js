@@ -7,9 +7,7 @@ const SS_EXIM_CONFIG = {
   // REPLACE BEFORE PRODUCTION: Google Tag Manager container ID.
   gtmId: 'GTM-XXXXXXX',
   // REPLACE BEFORE PRODUCTION: Google Search Console verification token.
-  searchConsoleVerification: 'SEARCH_CONSOLE_VERIFICATION_REPLACE_ME',
-  // REPLACE BEFORE PRODUCTION: hCaptcha site key configured for ss-exim.com.
-  hcaptchaSiteKey: 'HCAPTCHA_SITE_KEY_REPLACE_ME'
+  searchConsoleVerification: 'SEARCH_CONSOLE_VERIFICATION_REPLACE_ME'
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -242,7 +240,7 @@ function initLightboxModal() {
   });
 }
 
-/** Contact Form: Web3Forms + honeypot + hCaptcha + AJAX */
+/** Contact Form: Web3Forms + honeypot + AJAX */
 function initContactForm() {
   const form = document.querySelector('#contact-form');
   if (!form) return;
@@ -261,47 +259,10 @@ function initContactForm() {
     form.prepend(honeypot);
   }
 
-  let captchaHost = form.querySelector('.h-captcha');
-  if (!captchaHost) {
-    captchaHost = document.createElement('div');
-    captchaHost.className = 'h-captcha form-captcha';
-    captchaHost.dataset.sitekey = SS_EXIM_CONFIG.hcaptchaSiteKey;
-    captchaHost.dataset.callback = 'ssEximCaptchaSolved';
-    captchaHost.setAttribute('data-expired-callback', 'ssEximCaptchaExpired');
-    if (submitBtn) submitBtn.before(captchaHost);
-  }
-
-  if (!document.querySelector('script[src^="https://js.hcaptcha.com/1/api.js"]')) {
-    const hcaptchaScript = document.createElement('script');
-    hcaptchaScript.src = 'https://js.hcaptcha.com/1/api.js';
-    hcaptchaScript.async = true;
-    hcaptchaScript.defer = true;
-    document.head.appendChild(hcaptchaScript);
-  }
-
-  if (submitBtn) {
-    submitBtn.disabled = true;
-    submitBtn.setAttribute('aria-disabled', 'true');
-  }
-
   const consent = document.createElement('p');
   consent.className = 'form-consent';
   consent.innerHTML = 'By submitting this form, you consent to SS Exim processing your enquiry as described in our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms/">Terms &amp; Conditions</a>.';
   if (submitBtn && !form.querySelector('.form-consent')) submitBtn.after(consent);
-
-  window.ssEximCaptchaSolved = () => {
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.removeAttribute('aria-disabled');
-    }
-  };
-
-  window.ssEximCaptchaExpired = () => {
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.setAttribute('aria-disabled', 'true');
-    }
-  };
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -309,22 +270,18 @@ function initContactForm() {
     const email = form.querySelector('[name="email"]');
     const phone = form.querySelector('[name="phone"]');
     const message = form.querySelector('[name="message"]');
-    const captchaToken = form.querySelector('[name="h-captcha-response"]')?.value || '';
     const isValid = Boolean(
       name?.value.trim() &&
       email?.value.trim() && email.value.includes('@') &&
       phone?.value.trim() &&
-      message?.value.trim() &&
-      captchaToken
+      message?.value.trim()
     );
 
     if (!isValid) {
       if (feedback) {
         feedback.style.display = 'block';
         feedback.style.color = '#dc2626';
-        feedback.textContent = captchaToken
-          ? 'Please fill out all required fields with valid details.'
-          : 'Please complete the anti-spam verification before submitting.';
+        feedback.textContent = 'Please fill out all required fields with valid details.';
       }
       return;
     }
@@ -334,7 +291,10 @@ function initContactForm() {
       feedback.style.color = '#1f5fbf';
       feedback.textContent = 'Sending your enquiry...';
     }
-    if (submitBtn) submitBtn.disabled = true;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-disabled', 'true');
+    }
 
     fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) })
       .then(async (response) => {
@@ -349,7 +309,6 @@ function initContactForm() {
             form_name: 'SS Exim Contact Form'
           });
           form.reset();
-          if (window.hcaptcha) window.hcaptcha.reset();
         } else {
           if (feedback) {
             feedback.style.color = '#dc2626';
@@ -365,8 +324,8 @@ function initContactForm() {
       })
       .finally(() => {
         if (submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.setAttribute('aria-disabled', 'true');
+          submitBtn.disabled = false;
+          submitBtn.removeAttribute('aria-disabled');
         }
       });
   });
