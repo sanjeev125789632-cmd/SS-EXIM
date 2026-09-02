@@ -267,7 +267,7 @@ function initContactForm() {
     captchaHost.className = 'h-captcha form-captcha';
     captchaHost.dataset.sitekey = SS_EXIM_CONFIG.hcaptchaSiteKey;
     captchaHost.dataset.callback = 'ssEximCaptchaSolved';
-    captchaHost.dataset['expired-callback'] = 'ssEximCaptchaExpired';
+    captchaHost.setAttribute('data-expired-callback', 'ssEximCaptchaExpired');
     if (submitBtn) submitBtn.before(captchaHost);
   }
 
