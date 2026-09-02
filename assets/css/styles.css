@@ -797,6 +797,22 @@ img {
   gap: 0.5rem;
 }
 
+/* Accessible homepage FAQ and editorial trust blocks */
+.faq-list { display:grid; gap:1rem; max-width:900px; margin:2rem auto 0; }
+.faq-list details { background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); box-shadow:var(--shadow-sm); }
+.faq-list summary { cursor:pointer; list-style:none; padding:1.25rem 3rem 1.25rem 1.25rem; font-family:'Outfit',sans-serif; font-weight:700; color:var(--navy); position:relative; }
+.faq-list summary::-webkit-details-marker { display:none; }
+.faq-list summary::after { content:'+'; position:absolute; right:1.25rem; top:50%; transform:translateY(-50%); color:var(--gold-dark); font-size:1.5rem; }
+.faq-list details[open] summary::after { content:'−'; }
+.faq-list summary:focus-visible { outline:3px solid var(--gold); outline-offset:3px; border-radius:var(--radius-md); }
+.faq-answer { padding:0 1.25rem 1.25rem; }
+.article-info { background:var(--sky); border:1px solid rgba(31,95,191,.2); border-radius:var(--radius-md); padding:1.25rem; margin:0 0 2rem; }
+.article-info dl { display:grid; grid-template-columns:max-content 1fr; gap:.5rem 1rem; margin:0; }
+.article-info dt { font-weight:700; color:var(--navy); }
+.article-info dd { margin:0; }
+.references { margin-top:2.5rem; padding-top:1.5rem; border-top:1px solid var(--border); }
+@media (max-width:600px) { .article-info dl { grid-template-columns:1fr; gap:.25rem; } .article-info dd { margin-bottom:.5rem; } }
+
 .faq-question::before {
   content: 'Q.';
   color: var(--gold-dark);

@@ -41,7 +41,9 @@
         "image": "https://www.ss-exim.com/assets/img/AFPC%20Panel.jpg",
         "publisher": { "@id": "https://www.ss-exim.com/#business" },
         "url": "https://www.ss-exim.com/blog/apfc-panel-guide/",
-        "datePublished": "2026-08-01"
+        "datePublished": "2026-08-01",
+        "dateModified": "2026-09-02",
+        "author": { "@type": "Organization", "name": "SS-EXIM Technical Team" }
       }
     ]
   }
@@ -56,14 +58,14 @@
         <span class="top-info-item">📞 <a href="tel:+917045185111">+91 70451 85111</a></span>
         <span class="top-info-item">✉️ <a href="mailto:info@ss-exim.com">info@ss-exim.com</a></span>
       </div>
-      <div class="top-locations">Offices: Mumbai · Pune · Bangalore</div>
+      <div class="top-locations">Service Areas: Mumbai · Pune · Bangalore</div>
     </div>
   </div>
 
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo-link" aria-label="SS Exim Homepage">
-        <img src="/assets/img/logo.jpg" alt="SS Exim — Electrical, IoT &amp; Building Management Solutions" class="logo-img" width="180" height="52">
+        <img src="/assets/img/logo.svg" alt="SS Exim — Electrical, IoT &amp; Building Management Solutions" class="logo-img" width="180" height="52">
       </a>
       <nav class="nav-desktop" aria-label="Main Navigation">
         <ul class="nav-list">
@@ -148,11 +150,13 @@
     <!-- Article Body -->
     <section class="section">
       <div class="container" style="max-width:850px;">
-        <img src="/assets/img/AFPC%20Panel.jpg" alt="Automatic Power Factor Correction (APFC) Panel Fabricated by SS Exim" style="width:100%; border-radius:var(--radius-md); margin-bottom:2rem; box-shadow:var(--shadow-md);" width="850" height="450" loading="eager">
+        <img src="/assets/img/AFPC%20Panel.jpg" alt="Automatic power factor correction panel enclosure" style="width:100%; border-radius:var(--radius-md); margin-bottom:2rem; box-shadow:var(--shadow-md);" width="850" height="450" loading="eager">
+        <!-- TODO: CLIENT CONFIRMATION REQUIRED: Provide the author’s name, role, qualifications, experience and permission to publish. -->
+        <aside class="article-info" aria-label="Article information"><dl><dt>Author</dt><dd>SS-EXIM Technical Team</dd><dt>Published</dt><dd><time datetime="2026-08-01">1 August 2026</time></dd><dt>Updated</dt><dd><time datetime="2026-09-02">2 September 2026</time></dd><dt>Technical reviewer</dt><dd>Not named; client confirmation required</dd><dt>Corrections</dt><dd><a href="/contact/">Contact SS-EXIM</a></dd><dt>Policy</dt><dd><a href="/editorial-policy/">Editorial policy</a></dd></dl></aside>
 
         <h2>Why Power Factor Matters in Industrial Utilities</h2>
         <p>In AC power distribution, inductive loads such as electric motors, transformers, welding sets, and fluorescent lighting draw reactive power (kVAr) alongside active working power (kW). This creates a phase lag between voltage and current waveforms, lowering the overall system <strong>Power Factor (PF)</strong>.</p>
-        <p>Operating at a poor power factor (e.g. 0.75 or 0.80 lagging) increases total line current (kVA demand), causes voltage drops, and leads to severe financial penalties levied by state electricity distribution companies (MSEDCL, Tata Power, Adani Electricity, BESCOM) across India. Maintaining a power factor close to unity (0.99 PF) often earns electricity bill rebates.</p>
+        <p>Low power factor can increase current for a given active-power demand and may affect losses, voltage drop and utility billing. Penalties, incentives and target power factor vary by the applicable electricity tariff and supply agreement; verify the current rules for the facility before estimating financial impact.</p>
 
         <h2 style="margin-top:2rem;">How an APFC Panel Works</h2>
         <p>An <strong>Automatic Power Factor Correction (APFC) Panel</strong> continuously senses line voltage and load current via Current Transformers (CT). The intelligent APFC micro-processor controller calculates the reactive power demand and automatically switches steps of heavy-duty capacitor banks in or out of the circuit using specialized duty contactors or thyristor switches.</p>
@@ -162,7 +166,7 @@
         <ul style="margin:1rem 0 1.5rem 1.5rem;">
           <li style="margin-bottom:0.5rem;"><strong>Microprocessor APFC Controller:</strong> Reads active/reactive power and maintains target setpoints.</li>
           <li style="margin-bottom:0.5rem;"><strong>Heavy-Duty MPP Capacitors:</strong> Metalized Polypropylene (MPP) self-healing capacitors rated for 440V / 480V/ 525V to handle over-voltages.</li>
-          <li style="margin-bottom:0.5rem;"><strong>Detuned Harmonic Reactors:</strong> 7% or 14% detuned copper/aluminum reactors connected in series with capacitors to prevent harmonic resonance in non-linear load environments (VFDs, UPS).</li>
+          <li style="margin-bottom:0.5rem;"><strong>Detuned Harmonic Reactors:</strong> Reactor selection requires harmonic measurements and a project-specific study. Do not choose a detuning factor without checking the network and capacitor manufacturer’s documentation.</li>
           <li style="margin-bottom:0.5rem;"><strong>Switchgear &amp; Protection:</strong> Incomer <a href="/products/switchgear/">MCCB protection from Schneider, ABB, or Siemens</a>, along with HRC fuses or MCBs for step isolation.</li>
           <li style="margin-bottom:0.5rem;"><strong>Real-Time Power Quality Monitoring:</strong> Pre-integrated with <a href="/products/energy-meters/">Tor Titan smart energy meters</a> for cloud logging.</li>
         </ul>
@@ -172,14 +176,15 @@
         <p style="background:var(--sky); padding:1rem; border-left:4px solid var(--gold); font-family:monospace; font-size:1.1rem; margin:1rem 0;">
           Required kVAr = Peak kW × [ tan(cos⁻¹(Initial PF)) − tan(cos⁻¹(Target PF)) ]
         </p>
-        <p>For example, to raise a 200 kW industrial load from 0.78 PF to 0.99 PF requires approximately 130 kVAr of stepped capacitor compensation.</p>
+        <p>The formula is an initial calculation only. A qualified electrical engineer must verify measured demand, load variation, harmonics, transformer conditions, switching steps, utility requirements and applicable standards before selecting equipment.</p>
 
         <h2 style="margin-top:2rem;">Order Custom APFC Panels From SS Exim</h2>
-        <p>As a leading <a href="/products/panels/">custom electrical panel manufacturer</a> in Thane (Mumbai region), SS Exim fabricates APFC panels ranging from 20 kVAr up to 1000 kVAr with detuned reactors and brand-authorized switchgear, supplying projects in Mumbai, Pune, Bangalore, and across India.</p>
+        <p>SS Exim provides <a href="/products/panels/">custom electrical panel</a> quotations from its registered location in Thane and serves Mumbai, Pune and Bangalore subject to project scope. Ratings, switching method, reactors, protection, testing and installation must be defined in the approved specification.</p>
+        <section class="references" aria-labelledby="apfc-references"><h2 id="apfc-references">References</h2><ul><li><a href="https://webstore.iec.ch/en/publication/3609" rel="noopener noreferrer">IEC 60831-1:2014 — Self-healing shunt power capacitors for systems up to 1,000 V</a></li><li><a href="https://webstore.iec.ch/en/publication/32338" rel="noopener noreferrer">IEC 61439-1:2020 — Low-voltage switchgear and controlgear assemblies, general rules</a></li></ul><p>Use the editions and Indian adoptions applicable to the project. These references do not claim compliance by a particular panel.</p></section>
 
         <div style="background:var(--sky); padding:2rem; border-radius:var(--radius-md); border:1px solid rgba(31,95,191,0.2); margin-top:3rem;">
-          <h3>Eliminate Utility Penalties &amp; Save Money</h3>
-          <p>Send your monthly electricity bill or load schedule to SS Exim for a free APFC sizing calculation and payback estimate.</p>
+          <h3>Request a Project-specific APFC Assessment</h3>
+          <p>Provide the electricity bill, measured load profile, single-line diagram and harmonic information for scope review. Any sizing or payback estimate requires verified inputs and stated assumptions.</p>
           <a href="/contact/" class="btn btn-gold mb-1">Request APFC Quote</a>
         </div>
       </div>
@@ -191,7 +196,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <h4>SS Exim</h4>
-          <p class="footer-blurb">Mumbai-based electrical products distributor, IoT &amp; Building Management Systems (BMS) integrator, and custom panel manufacturer. Official channel partner for Tor.AI solutions.</p>
+          <p class="footer-blurb">Electrical products supplier, IoT &amp; Building Management Systems (BMS) integrator, and custom panel manufacturer serving Mumbai, Pune, Bangalore and other locations subject to project scope.</p>
           <p class="footer-blurb"><strong>GSTIN:</strong> 27AVVPA9795L1ZG</p>
         </div>
         <div class="footer-col">
@@ -199,7 +204,7 @@
           <ul class="footer-links">
             <li><a href="/">Home</a></li>
             <li><a href="/about/">About Us</a></li>
-            <li><a href="/brands/">Authorized Brands</a></li>
+            <li><a href="/brands/">Brands Supplied</a></li>
             <li><a href="/services/">Engineering Services</a></li>
             <li><a href="/gallery/">Project Gallery</a></li>
             <li><a href="/blog/">Electrical Insights Blog</a></li>
@@ -226,7 +231,7 @@
             <li class="footer-contact-item">📞 Phone: <a href="tel:+917045185111">+91 70451 85111</a></li>
             <li class="footer-contact-item">💬 WhatsApp: <a href="https://wa.me/917045185111" target="_blank" rel="noopener noreferrer">+91 70451 85111</a></li>
             <li class="footer-contact-item">✉️ Email: <a href="mailto:info@ss-exim.com">info@ss-exim.com</a></li>
-            <li class="footer-contact-item">🏢 Offices: Mumbai · Pune · Bangalore</li>
+            <li class="footer-contact-item">🏢 Service Areas: Mumbai · Pune · Bangalore</li>
           </ul>
         </div>
       </div>

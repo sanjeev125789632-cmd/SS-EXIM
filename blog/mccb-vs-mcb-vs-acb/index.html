@@ -41,7 +41,9 @@
         "image": "https://www.ss-exim.com/assets/img/MCCB%20Supply.jpg",
         "publisher": { "@id": "https://www.ss-exim.com/#business" },
         "url": "https://www.ss-exim.com/blog/mccb-vs-mcb-vs-acb/",
-        "datePublished": "2026-08-01"
+        "datePublished": "2026-08-01",
+        "dateModified": "2026-09-02",
+        "author": { "@type": "Organization", "name": "SS-EXIM Technical Team" }
       }
     ]
   }
@@ -56,14 +58,14 @@
         <span class="top-info-item">📞 <a href="tel:+917045185111">+91 70451 85111</a></span>
         <span class="top-info-item">✉️ <a href="mailto:info@ss-exim.com">info@ss-exim.com</a></span>
       </div>
-      <div class="top-locations">Offices: Mumbai · Pune · Bangalore</div>
+      <div class="top-locations">Service Areas: Mumbai · Pune · Bangalore</div>
     </div>
   </div>
 
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo-link" aria-label="SS Exim Homepage">
-        <img src="/assets/img/logo.jpg" alt="SS Exim — Electrical, IoT &amp; Building Management Solutions" class="logo-img" width="180" height="52">
+        <img src="/assets/img/logo.svg" alt="SS Exim — Electrical, IoT &amp; Building Management Solutions" class="logo-img" width="180" height="52">
       </a>
       <nav class="nav-desktop" aria-label="Main Navigation">
         <ul class="nav-list">
@@ -149,25 +151,27 @@
     <section class="section">
       <div class="container" style="max-width:850px;">
         <img src="/assets/img/MCCB%20Supply.jpg" alt="Industrial MCCB and ACB Switchgear Components" style="width:100%; border-radius:var(--radius-md); margin-bottom:2rem; box-shadow:var(--shadow-md);" width="850" height="450" loading="eager">
+        <!-- TODO: CLIENT CONFIRMATION REQUIRED: Provide the author’s name, role, qualifications, experience and permission to publish. -->
+        <aside class="article-info" aria-label="Article information"><dl><dt>Author</dt><dd>SS-EXIM Technical Team</dd><dt>Published</dt><dd><time datetime="2026-08-01">1 August 2026</time></dd><dt>Updated</dt><dd><time datetime="2026-09-02">2 September 2026</time></dd><dt>Technical reviewer</dt><dd>Not named; client confirmation required</dd><dt>Corrections</dt><dd><a href="/contact/">Contact SS-EXIM</a></dd><dt>Policy</dt><dd><a href="/editorial-policy/">Editorial policy</a></dd></dl></aside>
 
         <h2>Introduction to Low-Voltage Circuit Breakers</h2>
         <p>Selecting the correct protective circuit breaker is vital to safeguarding personnel, preventing electrical fires, and avoiding catastrophic equipment damage. When designing <a href="/products/panels/">custom electrical distribution panels</a>, engineers primarily choose among three distinct classes of circuit breakers: <strong>Miniature Circuit Breakers (MCB)</strong>, <strong>Moulded Case Circuit Breakers (MCCB)</strong>, and <strong>Air Circuit Breakers (ACB)</strong>.</p>
         <p>While all three devices interrupt abnormal overload and short-circuit currents, their current ratings, breaking capacities, and tripping mechanisms differ significantly.</p>
 
         <h2 style="margin-top:2rem;">1. Miniature Circuit Breakers (MCB)</h2>
-        <p>MCBs are compact, fixed-trip devices designed for low-current sub-circuits (up to 125 Amps). They protect lighting DB boards, small machinery, and office plug points.</p>
+        <p>MCBs are compact protective devices commonly used for final and sub-circuits. Available current ratings, breaking capacities and trip curves vary by product series and must be checked against the manufacturer datasheet and the project study.</p>
         <ul style="margin:0.5rem 0 1.5rem 1.5rem;">
-          <li><strong>Current Rating (In):</strong> 0.5A to 125A</li>
-          <li><strong>Short-Circuit Breaking Capacity (Icn):</strong> Typically 6kA to 10kA</li>
-          <li><strong>Tripping Mechanism:</strong> Fixed thermal-magnetic (B, C, or D curves)</li>
+          <li><strong>Current Rating (In):</strong> Product-specific; verify the selected series</li>
+          <li><strong>Short-Circuit Breaking Capacity (Icn):</strong> Must exceed the project requirement and match the applicable standard</li>
+          <li><strong>Tripping Mechanism:</strong> Verify the curve and technology for the selected product</li>
           <li><strong>Key Benefit:</strong> Din-rail mounting, compact size, cost-effective</li>
         </ul>
 
         <h2 style="margin-top:2rem;">2. Moulded Case Circuit Breakers (MCCB)</h2>
         <p>MCCBs are robust, industrial-grade breakers enclosed in a heavy glass-filled polyester housing. They serve as primary protection for motor feeders, sub-distribution panels, and <a href="/products/panels/">APFC panels</a>.</p>
         <ul style="margin:0.5rem 0 1.5rem 1.5rem;">
-          <li><strong>Current Rating (In):</strong> 16A up to 1600A</li>
-          <li><strong>Short-Circuit Breaking Capacity (Icu):</strong> 25kA to 100kA</li>
+          <li><strong>Current Rating (In):</strong> Product-specific; verify the selected frame and trip unit</li>
+          <li><strong>Short-Circuit Breaking Capacity (Icu):</strong> Select from the calculated fault level and exact datasheet</li>
           <li><strong>Tripping Mechanism:</strong> Adjustable thermal-magnetic or microprocessor electronic trip units</li>
           <li><strong>Key Benefit:</strong> Adjustable trip setpoints, auxiliary contacts, shunt trip options</li>
         </ul>
@@ -175,8 +179,8 @@
         <h2 style="margin-top:2rem;">3. Air Circuit Breakers (ACB)</h2>
         <p>ACBs are heavy-duty, high-capacity circuit breakers used as main incomer protection directly downstream of distribution transformers or diesel generators. They operate in air at atmospheric pressure and feature advanced arc chutes.</p>
         <ul style="margin:0.5rem 0 1.5rem 1.5rem;">
-          <li><strong>Current Rating (In):</strong> 630A up to 6300A</li>
-          <li><strong>Short-Circuit Breaking Capacity (Icu):</strong> 50kA to 100kA (High short-time withstand Icw)</li>
+          <li><strong>Current Rating (In):</strong> Product-specific; verify the selected frame and trip unit</li>
+          <li><strong>Short-Circuit Breaking Capacity (Icu):</strong> Select from the calculated fault level, withstand requirement and exact datasheet</li>
           <li><strong>Execution:</strong> Fixed or Draw-out 3-Pole / 4-Pole</li>
           <li><strong>Key Benefit:</strong> Full selectivity (LSI/LSIG protection), motorized charging, remote tripping</li>
         </ul>
@@ -195,15 +199,15 @@
             <tbody>
               <tr>
                 <td><strong>Current Rating</strong></td>
-                <td>Up to 125A</td>
-                <td>16A to 1600A</td>
-                <td>630A to 6300A</td>
+                <td>Product-specific</td>
+                <td>Product-specific</td>
+                <td>Product-specific</td>
               </tr>
               <tr>
                 <td><strong>Breaking Capacity</strong></td>
-                <td>6kA – 15kA</td>
-                <td>25kA – 100kA</td>
-                <td>50kA – 100kA</td>
+                <td>Verify Icn</td>
+                <td>Verify Icu/Ics</td>
+                <td>Verify Icu/Ics/Icw</td>
               </tr>
               <tr>
                 <td><strong>Trip Setting</strong></td>
@@ -221,12 +225,13 @@
           </table>
         </div>
 
-        <h2 style="margin-top:2rem;">Source Authorized Switchgear From SS Exim</h2>
-        <p>As an authorized distributor and supply partner for <a href="/brands/">Schneider Electric, ABB, Siemens, Havells, L&amp;T, and NOARK</a>, SS Exim supplies authentic ACBs, MCCBs, and MCBs with official test certificates across Mumbai, Pune, Bangalore, and all major cities in India.</p>
+        <h2 style="margin-top:2rem;">Request Project-specific Switchgear Selection</h2>
+        <p>SS Exim supplies ACBs, MCCBs and MCBs from <a href="/brands/">leading brands</a>, subject to availability, approved specifications, supplier documentation and applicable OEM terms. Selection must consider load, voltage, fault level, cable capacity, starting current, coordination, breaking capacity and applicable standards.</p>
+        <section class="references" aria-labelledby="switchgear-references"><h2 id="switchgear-references">References</h2><ul><li><a href="https://webstore.iec.ch/en/publication/66277" rel="noopener noreferrer">IEC 60947-2:2024 — Low-voltage switchgear and controlgear: circuit-breakers</a></li><li><a href="https://www.bis.gov.in/news_2024-10-01_117/" rel="noopener noreferrer">Bureau of Indian Standards — overview of the IS/IEC 60947 series</a></li></ul><p>Manufacturer ranges vary. Confirm current datasheets, breaking capacities, trip characteristics and the Indian standard applicable to the project before selection.</p></section>
 
         <div style="background:var(--sky); padding:2rem; border-radius:var(--radius-md); border:1px solid rgba(31,95,191,0.2); margin-top:3rem;">
-          <h3>Procure Authentic Switchgear With Warranty</h3>
-          <p>Contact SS Exim for authorized brand price lists, technical selection assistance, or panel integration requests.</p>
+          <h3>Request Switchgear Documentation and a Technical Quote</h3>
+          <p>State the required traceability documents, test certificates and warranty terms in the enquiry. Availability depends on the quoted item and supplier documentation.</p>
           <a href="/contact/" class="btn btn-gold mb-1">Request Switchgear Quote</a>
         </div>
       </div>
@@ -238,7 +243,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <h4>SS Exim</h4>
-          <p class="footer-blurb">Mumbai-based electrical products distributor, IoT &amp; Building Management Systems (BMS) integrator, and custom panel manufacturer. Official channel partner for Tor.AI solutions.</p>
+          <p class="footer-blurb">Electrical products supplier, IoT &amp; Building Management Systems (BMS) integrator, and custom panel manufacturer serving Mumbai, Pune, Bangalore and other locations subject to project scope.</p>
           <p class="footer-blurb"><strong>GSTIN:</strong> 27AVVPA9795L1ZG</p>
         </div>
         <div class="footer-col">
@@ -246,7 +251,7 @@
           <ul class="footer-links">
             <li><a href="/">Home</a></li>
             <li><a href="/about/">About Us</a></li>
-            <li><a href="/brands/">Authorized Brands</a></li>
+            <li><a href="/brands/">Brands Supplied</a></li>
             <li><a href="/services/">Engineering Services</a></li>
             <li><a href="/gallery/">Project Gallery</a></li>
             <li><a href="/blog/">Electrical Insights Blog</a></li>
@@ -273,7 +278,7 @@
             <li class="footer-contact-item">📞 Phone: <a href="tel:+917045185111">+91 70451 85111</a></li>
             <li class="footer-contact-item">💬 WhatsApp: <a href="https://wa.me/917045185111" target="_blank" rel="noopener noreferrer">+91 70451 85111</a></li>
             <li class="footer-contact-item">✉️ Email: <a href="mailto:info@ss-exim.com">info@ss-exim.com</a></li>
-            <li class="footer-contact-item">🏢 Offices: Mumbai · Pune · Bangalore</li>
+            <li class="footer-contact-item">🏢 Service Areas: Mumbai · Pune · Bangalore</li>
           </ul>
         </div>
       </div>

@@ -23,6 +23,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initGlobalMetadata() {
+  // Keep the verified SVG logo and service-area wording consistent on legacy pages.
+  document.querySelectorAll('img.logo-img').forEach((logo) => {
+    logo.src = '/assets/img/logo.svg';
+  });
+
+  document.querySelectorAll('.top-locations, .footer-contact-item').forEach((element) => {
+    element.innerHTML = element.innerHTML.replace(/Offices:/g, 'Service Areas:');
+  });
+
+  if (window.location.pathname === '/contact/' || window.location.pathname === '/contact/index.html') {
+    const description = 'Contact SS Exim in Thane for electrical panels, switchgear, lighting and BMS enquiries. Mumbai, Pune and Bangalore are service areas.';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (metaDescription) metaDescription.content = description;
+    if (ogDescription) ogDescription.content = description;
+    document.querySelectorAll('h2').forEach((heading) => {
+      if (heading.textContent.trim() === 'Headquarters & Support') heading.textContent = 'Registered Address & Support';
+    });
+  }
+
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
 
