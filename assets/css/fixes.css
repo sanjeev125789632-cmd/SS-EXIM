@@ -76,3 +76,52 @@ button:disabled,
   border-radius: 4px;
   padding: 0.15rem 0.35rem;
 }
+
+/* Article engineering/safety limitation notice. */
+.article-disclaimer {
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--gold);
+  background: var(--surface-alt);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.article-disclaimer strong {
+  color: var(--navy, var(--blue-dark));
+}
+
+/* Neutral product-category placeholder used where no licensed product photograph exists. */
+.product-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 100%;
+  min-height: 220px;
+  padding: 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--sky) 0%, #ffffff 100%);
+  border: 1px dashed rgba(31, 95, 191, 0.35);
+  color: var(--blue-deep);
+}
+
+.product-placeholder svg {
+  width: 56px;
+  height: 56px;
+  color: var(--blue);
+}
+
+.product-placeholder span {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
